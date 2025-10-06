@@ -1,16 +1,23 @@
-# Student Grade Evaluation Program
+# Student Grade Evaluation Program - Modified Version
 
-marks = int(input("Enter marks of the student: "))
+marks = []
 
-if marks >= 90:
+for i in range(5):
+    mark = float(input(f"Enter marks for subject {i+1}: "))
+    marks.append(mark)
+
+average = sum(marks) / 5
+
+if average >= 90:
     grade = 'A'
-elif marks >= 80:
+elif average >= 75:
     grade = 'B'
-elif marks >= 70:
+elif average >= 60:
     grade = 'C'
-elif marks >= 60:
+elif average >= 40:
     grade = 'D'
 else:
     grade = 'Fail'
 
+print(f"Average Marks: {average:.2f}")
 print("Grade:", grade)

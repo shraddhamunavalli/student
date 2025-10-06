@@ -19,5 +19,4 @@ elif average >= 40:
 else:
     grade = 'Fail'
 
-print(f"Average Marks: {average:.2f}")
 print("Grade:", grade)
